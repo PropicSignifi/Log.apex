@@ -1,0 +1,130 @@
+---
+title: "Home"
+description: "Log.apex is a library to provide easy-to-use logging functionality to your app."
+---
+
+{namespace pageIndex}
+
+/**
+ */
+{template .render}
+	{@param site: ?}
+
+	{call main.render data="all"}
+		{param content kind="html"}
+			{call .header data="all" /}
+			{call .why /}
+			{call .features /}
+			{call .how /}
+			{call .highlights /}
+			{call Footer.render data="all" /}
+		{/param}
+	{/call}
+{/template}
+
+/**
+ */
+{template .header}
+	{@param site: ?}
+
+	<header class="header">
+		<div class="container">
+			<h1 class="header-title">{$site.title}</h1>
+			<h2 class="header-subtitle">{$site.index.description}</h2>
+			<div class="btn-group">
+				<a href="/log-apex/tutorials/getting_started/step_1.html" class="btn btn-accent btn-sm">Get Started</a>
+				<a href="https://github.com/Click-to-Cloud/Log.apex/" class="btn btn-success btn-sm">GitHub</a>
+				<a href="/" onclick="location.assign('/')" class="btn btn-default btn-sm">Not Interested</a>
+			</div>
+		</div>
+	</header>
+{/template}
+
+/**
+ */
+{template .why}
+	<article class="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-md-offset-2">
+					<h3 class="about-title">Why Log.apex?</h3>
+					<p class="about-description">Log.apex gives you fine control over logging behaviors. You can switch on/off specific logging, apply sync/async logging and even provide your custom logging implementation.</p>
+				</div>
+			</div>
+		</div>
+	</article>
+{/template}
+
+/**
+ */
+{template .features}
+	<div class="features">
+		<div class="container">
+			<div class="row">
+				<section class="feature col-md-4 col-md-offset-2">
+					<h3 class="feature-title">Easy to Use</h3>
+					<p class="feature-description">Log.apex is easy to use and configure.</p>
+				</section>
+				<section class="feature col-md-4">
+					<h3 class="feature-title">Async Logging</h3>
+					<p class="feature-description">Log.apex supports async logging to avoid performance penalty.</p>
+				</section>
+				<section class="feature col-md-4">
+					<h3 class="feature-title">Customization</h3>
+					<p class="feature-description">Log.apex allows easy customization and extension.</p>
+				</section>
+			</div>
+		</div>
+	</div>
+{/template}
+
+/**
+ */
+{template .how}
+	<article class="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-md-offset-2">
+					<h3 class="about-title">Simple and Easy</h3>
+					<p class="about-description">It takes only a few lines to use Log.apex.</p>
+				</div>
+			</div>
+		</div>
+	</article>
+{/template}
+
+/**
+ */
+{template .highlights}
+	<div class="highlights">
+		<div class="container">
+			<section class="highlight row">
+				<div class="col-md-6 col-md-offset-2">
+					<h4 class="highlight-title">Simple API</h4>
+					<p class="highlight-description">Log.apex offers simple API to use.</p>
+				</div>
+				<div class="col-md-5 col-md-offset-1">
+					<img class="highlight-image" src="/log-apex/images/highlight_1.png" alt="Simple API" height="200">
+				</div>
+			</section>
+			<section class="highlight row">
+				<div class="col-md-6 col-md-push-9">
+					<h4 class="highlight-title">Configuration</h4>
+					<p class="highlight-description">Log.apex has fine control over loggers.</p>
+				</div>
+				<div class="col-md-5 col-md-offset-2 col-md-pull-6">
+					<img class="highlight-image" src="/log-apex/images/highlight_2.png" alt="Configuration" height="200">
+				</div>
+			</section>
+			<section class="highlight row">
+				<div class="col-md-6 col-md-offset-2">
+					<h4 class="highlight-title">Customization</h4>
+					<p class="highlight-description">Log.apex allows you to create custom logging implementation.</p>
+				</div>
+				<div class="col-md-5 col-md-offset-1">
+					<img class="highlight-image" src="/log-apex/images/highlight_3.png" alt="Customization" height="200">
+				</div>
+			</section>
+		</div>
+	</div>
+{/template}

@@ -502,6 +502,7 @@ public class Log {
         stackTraceString = stackTraceString.substringAfter('\n');
         stackTraceString = stackTraceString.substringAfter('\n');
         stackTraceString = stackTraceString.substringAfter('\n');
+        stackTraceString = stackTraceString.substringAfter('\n');
         stackTraceString = stackTraceString.substringBefore('\n');
 
         Matcher m = Log.STACKTRACE_PATTERN.matcher(stackTraceString);

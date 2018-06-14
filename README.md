@@ -82,6 +82,12 @@ This will control the logger named 'test', created below.
 private static final Log logger = Log.getLogger('test');
 ```
 
+And you can get output similar to this:
+
+```
+11:18:39.50 (103576326)|USER_DEBUG|[984]|DEBUG|AnonymousBlock.(unknown method) Line 2 Column 1 - debug message
+```
+
 Patterns here support regular expressions, and you can set multiple patterns as well.
 
 And the config will enable the 'test' logger to print any information with level no less than 'Debug'(Debug, Info, Warn, Error). Besides, it specifies the appender, which is used to append the log information to somewhere. Here we used the default appender, which uses `System.debug` as the logging output.
