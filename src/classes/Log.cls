@@ -519,6 +519,12 @@ public class Log {
             ctx.line = Integer.valueOf(m.group(4));
             ctx.column = Integer.valueOf(m.group(5));
         }
+        else {
+            ctx.className = 'Unknown';
+            ctx.methodName = 'Unknown';
+            ctx.line = 0;
+            ctx.column = 0;
+        }
 
         return ctx;
     }
